@@ -1,0 +1,33 @@
+.pokemonSearch {
+  width: 100%;
+  &__form {
+    &-field {
+      position: relative;
+      width: 100%;
+      input {
+        font-size: var(--font-sm);
+        padding: var(--s-md) var(--s-lg);
+        border-radius: var(--s-xl);
+        width: 100%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        border: 1px solid var(--grey-light);
+        box-shadow: var(--shadow-search);
+
+        &:focus {
+          outline: none;
+          border: 1px solid var(--grey-medium);
+        }
+      }
+      button {
+        position: absolute;
+        top: 0;
+        right: var(--s-xl);
+        transform: translateY(50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}

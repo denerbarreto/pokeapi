@@ -1,0 +1,20 @@
+@use "../../sass/utils/breakpoints.scss" as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--s-xl) !important;
+
+  h1 {
+    display: none;
+    @include sm {
+      display: block;
+      text-align: center;
+      font-size: var(--font-xl);
+      font-weight: var(--font-regular);
+      margin: var(--s-xl) 0;
+      color: var(--black-color);
+      letter-spacing: var(--s-xxs);
+    }
+  }
+}
