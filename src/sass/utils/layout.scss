@@ -1,0 +1,31 @@
+@use "./breakpoints.scss" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.6rem;
+  margin: 0 auto;
+
+  &-center {
+    @extend .container;
+    justify-content: center;
+  }
+
+  @include sm {
+    max-width: 448px;
+    padding: 0;
+  }
+
+  @include md {
+    max-width: 668px;
+  }
+
+  @include lg {
+    max-width: 896px;
+  }
+
+  @include xl {
+    max-width: 1136px;
+  }
+}
