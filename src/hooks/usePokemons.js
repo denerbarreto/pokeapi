@@ -19,6 +19,19 @@ async function getAllPokemons(pageNum) {
   return allPokemons;
 }
 
+async function getPokemonColor(pokemonId) {
+  const { data } = await axios.get(`${urls.color}/${pokemonId}`);
+  return data;
+}
+export function usePokemonColor(pokemonId) {
+  const { data } = useQuery(
+    [queryKeys.color, pokemonId],
+    () => getPokemonColor(pokemonId),
+    { staleTime: Infinity }
+  );
+  return data;
+}
+
 // Get all pokemons in the pagination
 export function usePokemons(currentPage, nextPage) {
   const { data } = useQuery(

@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { usePokemons } from "../../hooks/usePokemons";
+import PokemonCard from "../PokemonCard/PokemonCard";
+
+import "./PokemonList.scss";
 
 const PokemonList = () => {
   const firstPage = 0;
@@ -11,7 +14,11 @@ const PokemonList = () => {
   return (
     <div className="container">
       <div className="pokemonList">
-        <div className="pokemonList__pokemons"></div>
+        <div className="pokemonList__pokemons">
+          {data?.map((pokemon) => (
+            <PokemonCard key={pokemon.id} pokemon={pokemon} />
+          ))}
+        </div>
         <div className="pokemonList__btn">
           {/* The Inicio button just show if the current page is different of the firsts two pages */}
           {currentPage !== firstPage && currentPage !== nextPage ? (

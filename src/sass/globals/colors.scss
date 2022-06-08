@@ -15,13 +15,15 @@ $shadow-dropdown: 2px 2px 2px rgba(33, 33, 33, 0.1);
 $shadow-button: 0px 2px 0px rgba(0, 0, 0, 0.18);
 
 // Pokemons color
-$green-pokemon: #48d0b0;
-$red-pokemon: #fb6c6c;
-$pink-pokemon: #f2cdd6;
-$blue-pokemon: #77bdfe;
-$yellow-pokemon: #ffce4b;
-$purple-pokemon: #a499c1;
-$brown-pokemon: #deb887;
-$gray-pokemon: #b8b8b8;
-$black-pokemon: #888888;
-$white-pokemon: #99ceff;
+:root {
+  --green-pokemon: #48d0b0;
+  --red-pokemon: #fb6c6c;
+  --pink-pokemon: #f2cdd6;
+  --blue-pokemon: #77bdfe;
+  --yellow-pokemon: #ffce4b;
+  --purple-pokemon: #a499c1;
+  --brown-pokemon: #deb887;
+  --gray-pokemon: #b8b8b8;
+  --black-pokemon: #888888;
+  --white-pokemon: #99ceff;
+}
