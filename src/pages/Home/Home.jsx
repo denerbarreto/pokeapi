@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import banner from "../../assets/banner.svg";
+import { usePrefetchPokemons } from "../../hooks/usePokemons";
 
 import "./Home.scss";
 
 const Home = () => {
+  // Prefetch the first page of the pokemons list
+  usePrefetchPokemons();
   return (
     <div className="container hero__wrapper">
       <div className="hero">

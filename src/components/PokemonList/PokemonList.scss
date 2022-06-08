@@ -1,0 +1,14 @@
+@use "../../sass/utils/breakpoints.scss" as *;
+
+.pokemonList__pokemons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-md);
+
+  @include sm {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
