@@ -1,3 +1,5 @@
+@use "../../sass/globals/colors.scss" as *;
+
 .pokemonSearch {
   width: 100%;
   &__form {
@@ -11,12 +13,12 @@
         width: 100%;
         width: -moz-available;
         width: -webkit-fill-available;
-        border: 1px solid var(--grey-light);
-        box-shadow: var(--shadow-search);
+        border: 1px solid $grey-light;
+        box-shadow: $shadow-search;
 
         &:focus {
           outline: none;
-          border: 1px solid var(--grey-medium);
+          border: 1px solid $grey-medium;
         }
       }
       button {

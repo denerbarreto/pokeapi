@@ -1,4 +1,5 @@
 @use "../../sass/utils/breakpoints.scss" as *;
+@use "../../sass/globals/colors.scss" as *;
 
 .home {
   display: flex;
@@ -13,7 +14,7 @@
       font-size: var(--font-xl);
       font-weight: var(--font-regular);
       margin: var(--s-xl) 0;
-      color: var(--black-color);
+      color: $black-color;
       letter-spacing: var(--s-xxs);
     }
   }

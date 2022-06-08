@@ -1,0 +1,127 @@
+@use "../../sass/utils/breakpoints.scss" as *;
+@use "../../sass/globals/colors.scss" as *;
+
+.container {
+  &.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include lg {
+      flex-direction: row;
+    }
+  }
+}
+
+.hero {
+  margin-top: var(--s-lg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include xl {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include lg {
+      margin-top: var(--s-xxl);
+    }
+    @include xl {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 50rem;
+    }
+
+    &-heading {
+      display: flex;
+      flex-direction: column;
+      gap: var(--font-sm);
+      h1 {
+        font-weight: var(--font-extrabold);
+        font-size: var(--font-xl);
+        span {
+          position: relative;
+          span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: var(--s-sm);
+            border: var(--s-sm) solid $yellow-color;
+            z-index: -1;
+            @include md {
+              right: var(--s-lg);
+              border: var(--s-md) solid $yellow-color;
+            }
+          }
+        }
+        @include md {
+          font-size: var(--font-xxl);
+        }
+        @include lg {
+          text-align: left;
+        }
+      }
+      p {
+        font-size: var(--font-sm);
+        @include md {
+          font-size: var(--font-md);
+        }
+        @include lg {
+          text-align: center;
+        }
+        @include xl {
+          text-align: left;
+        }
+      }
+    }
+
+    &-cta {
+      margin-top: var(--font-lg);
+      background-color: $green-color;
+      padding: var(--s-md) var(--s-lg);
+      border-radius: var(--s-xs);
+      box-shadow: $shadow-button;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($green-color, 10%);
+      }
+
+      a {
+        text-decoration: none;
+        color: $white-color;
+        font-size: var(--font-sm);
+        font-weight: var(--font-bold);
+        @include md {
+          font-size: var(--font-md);
+        }
+      }
+    }
+  }
+  &__banner {
+    margin-right: 0;
+    margin-top: var(--s-lg);
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      position: absolute;
+      right: 0;
+      width: 90%;
+
+      @include lg {
+        width: 70%;
+      }
+      @include xl {
+        width: 45%;
+      }
+    }
+  }
+}
