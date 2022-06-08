@@ -24,10 +24,8 @@ async function getPokemonColor(pokemonId) {
   return data;
 }
 export function usePokemonColor(pokemonId) {
-  const { data } = useQuery(
-    [queryKeys.color, pokemonId],
-    () => getPokemonColor(pokemonId),
-    { staleTime: Infinity }
+  const { data } = useQuery([queryKeys.color, pokemonId], () =>
+    getPokemonColor(pokemonId)
   );
   return data;
 }

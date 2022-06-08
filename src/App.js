@@ -7,6 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import { QueryClientProvider } from "react-query";
 import { queryClient } from "./api/queryClient";
 import { ReactQueryDevtools } from "react-query/devtools";
+import Pokemon from "./components/Pokemon/Pokemon";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="pokemons" element={<Pokemons />} />
+          <Route path="pokemons/:pokemonId" element={<Pokemon />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
         <ReactQueryDevtools />

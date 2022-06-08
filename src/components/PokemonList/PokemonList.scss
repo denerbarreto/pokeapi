@@ -1,6 +1,7 @@
 @use "../../sass/utils/breakpoints.scss" as *;
 
 .pokemonList__pokemons {
+  margin-top: var(--s-lg);
   width: 100%;
   display: flex;
   flex-direction: column;
