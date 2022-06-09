@@ -1,7 +1,7 @@
 export const queryKeys = {
   pokemons: "pokemons",
   pokemon: "pokemon",
-  color: "color",
+  specie: "specie",
   characteristic: "characteristic",
 };
 
@@ -9,6 +9,6 @@ const url = "https://pokeapi.co/api/v2";
 export const urls = {
   base: url,
   pokemon: `${url}/pokemon`,
-  color: `${url}/pokemon-color`,
+  specie: `${url}/pokemon-species`,
   characteristic: `${url}/characteristic`,
 };

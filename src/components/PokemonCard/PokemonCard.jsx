@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import { usePokemonColor } from "../../hooks/usePokemons";
+import { useSpecie } from "../../hooks/usePokemon";
 import "./PokemonCard.scss";
 
-const PokemonCard = ({ pokemon }) => {
-  const pokemonColor = usePokemonColor(pokemon.id);
+const PokemonCard = ({ pokemon, pokemonName }) => {
+  const { data: dataColor } = useSpecie(pokemonName);
   // Convert id number to #001~
-  var str = "" + pokemon.id;
+  var str = "" + pokemon?.id;
   var ref = "000";
   var format = ref.substring(0, ref.length - str.length) + str;
   return (
-    <Link to={`${pokemon.id}`} className="pokemonCard">
+    <Link to={`${pokemon?.id}`} className="pokemonCard">
       <div
         className="pokemonCard__wrapper"
         style={{
           backgroundColor: `var(--${
-            pokemonColor ? pokemonColor?.name : "purple"
+            dataColor ? dataColor?.color.name : "purple"
           }-pokemon)`,
         }}
       >
@@ -24,7 +24,7 @@ const PokemonCard = ({ pokemon }) => {
         </div>
         <div className="pokemonCard__info">
           <div className="pokemonCard__info-text">
-            <p>{pokemon.name}</p>
+            <p>{pokemon?.name}</p>
             <div className="pokemonCard__info-specie">
               {pokemon?.types?.map((type) => (
                 <div key={uuidv4()}>

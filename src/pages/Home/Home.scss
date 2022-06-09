@@ -88,13 +88,14 @@
       padding: var(--s-md) var(--s-lg);
       border-radius: var(--s-xs);
       box-shadow: $shadow-button;
+      text-decoration: none;
       cursor: pointer;
 
       &:hover {
         background-color: lighten($green-color, 10%);
       }
 
-      a {
+      p {
         text-decoration: none;
         color: $white-color;
         font-size: var(--font-sm);

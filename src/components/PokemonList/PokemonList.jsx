@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useColor } from "../../hooks/usePokemon";
 import { usePokemons } from "../../hooks/usePokemons";
 import PokemonCard from "../PokemonCard/PokemonCard";
 
@@ -16,7 +17,11 @@ const PokemonList = () => {
       <div className="pokemonList">
         <div className="pokemonList__pokemons">
           {data?.map((pokemon) => (
-            <PokemonCard key={pokemon.id} pokemon={pokemon} />
+            <PokemonCard
+              key={pokemon.id}
+              pokemon={pokemon}
+              pokemonName={pokemon.name}
+            />
           ))}
         </div>
         <div className="pokemonList__btn">

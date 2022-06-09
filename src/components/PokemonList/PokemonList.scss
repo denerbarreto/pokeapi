@@ -1,15 +1,45 @@
 @use "../../sass/utils/breakpoints.scss" as *;
+@use "../../sass/globals/colors.scss" as *;
 
-.pokemonList__pokemons {
-  margin-top: var(--s-lg);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--s-md);
+.pokemonList {
+  &__pokemons {
+    margin-top: var(--s-lg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-md);
 
-  @include sm {
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include sm {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    button {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: $yellow-color;
+      border: none;
+      box-shadow: $shadow-button;
+
+      &:disabled {
+        cursor: default;
+      }
+
+      &:hover:enabled {
+        background-color: lighten($yellow-color, 10%);
+      }
+
+      // &:hover {
+      //   background-color: lighten($yellow-color, 10%);
+      // }
+    }
   }
 }

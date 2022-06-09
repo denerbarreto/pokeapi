@@ -23,9 +23,9 @@ const Home = () => {
               habilidades.
             </p>
           </div>
-          <div className="hero__text-cta">
-            <Link to="/pokemons">Veja os pokemons</Link>
-          </div>
+          <Link to="/pokemons" className="hero__text-cta">
+            <p>Veja os pokemons</p>
+          </Link>
         </div>
         <div className="hero__banner">
           <img src={banner} alt="banner" />
